@@ -1,0 +1,58 @@
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+
+# Make files
+Makefile
+*.deps
+*.user
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# Log files
+*.log
+
+# Package files
+*.dmg
+*.iso
+*.tar.gz
+*.zip
+*.deb
+*.rpm
+
+# Directories
+build/
+dist/
+

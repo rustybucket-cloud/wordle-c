@@ -1,0 +1,17 @@
+# Define the C compiler to use
+CC = gcc
+
+# Define any compile-time flags
+CFLAGS = -Wall -g
+
+# Define the target file
+TARGET = main
+
+all: $(TARGET)
+
+$(TARGET): $(TARGET).c
+	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
+
+clean:
+	$(RM) $(TARGET)
+
