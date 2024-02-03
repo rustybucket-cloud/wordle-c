@@ -32,7 +32,6 @@
 *.dSYM/
 
 # Make files
-Makefile
 *.deps
 *.user
 *.suo
@@ -40,6 +39,7 @@ Makefile
 *.sdf
 *.VC.db
 *.VC.opendb
+program
 
 # Log files
 *.log
