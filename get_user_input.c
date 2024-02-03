@@ -23,7 +23,12 @@ bool is_word_in_list(char *input) {
 
 int get_user_input(char *input) {
 	while (true) {
-		scanf("%s", input);
+		fgets(input, sizeof(input), stdin);
+		size_t len = strlen(input);
+		if (len > 0 && input[len - 1] == '\n') {
+			input[len - 1] = '\0';
+		}
+
 		if (strlen(input) != 5) {
 			printf("Word must be 5 letters. Try again.\n");
 			continue;

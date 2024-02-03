@@ -3,20 +3,10 @@
 #include <string.h>
 #include "get_word.h"
 #include "get_user_input.h"
+#include "create_result_string.h"
 
 bool compare_input_and_word(char *input, char *random_word) {
 	return strcmp(input, random_word) == 0;
-}
-
-void get_result_string(char *result_string, char *random_word, char *input) {
-	for (int i = 0; i < 5; i++) {
-		if (random_word[i] == input[i]) {
-			char res[] = { random_word[i], '\0' };
-			strcat(result_string, res);
-		} else {
-			strcat(result_string, "X");
-		}
-	}
 }
 
 int main() {
@@ -44,7 +34,7 @@ int main() {
 		} 
 
 		char result_string[10] = "";
-		get_result_string(result_string, random_word, input);
+		create_result_string(result_string, random_word, input);
 
 		printf("%s\n", result_string);
 		guess_count++;
