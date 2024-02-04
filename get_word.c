@@ -3,13 +3,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-// Get a random word. To get a random word, you need to:
-	// open the file
-	// select a random number between 1 and the # of lines in the file
-	// get the word at the line #define _GNU_SOURCE
-		// get the number of lines
-		// get the word
-
 int get_target_line(char *line, int target_line) {
 	FILE *file;
 	file = fopen("./words.txt", "r");
