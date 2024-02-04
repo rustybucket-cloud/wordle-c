@@ -23,7 +23,7 @@ int get_target_line(char *line, int target_line) {
 }
 
 int get_random_number(int numberOfLines) {
-	srand(0);
+	srand(time(NULL));
 	int random_number = rand() % numberOfLines;
 	return random_number;
 }

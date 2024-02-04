@@ -5,7 +5,7 @@ CC = gcc
 CFLAGS = -Wall -g
 
 # Define the target file
-TARGET = program
+TARGET = wordle
 
 # Define the C source files
 SRCS = main.c get_word.c get_user_input.c create_result_string.c

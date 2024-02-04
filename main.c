@@ -5,10 +5,6 @@
 #include "get_user_input.h"
 #include "create_result_string.h"
 
-bool compare_input_and_word(char *input, char *random_word) {
-	return strcmp(input, random_word) == 0;
-}
-
 int main() {
 	printf("Welcome to Wordle!\n");
 	char random_word[256] = "";
@@ -17,7 +13,6 @@ int main() {
 		return -1;
 	}
 	random_word[strcspn(random_word, "\n")] = 0;
-	printf("random word: %s\n", random_word);
 	printf("Enter a 5 letter word below\n");
 
 	int guess_count = 0;
@@ -28,7 +23,7 @@ int main() {
 			return -1;
 		} 
 
-		if (compare_input_and_word(input, random_word)) {
+		if (strcmp(input, random_word) == 0) {
 			printf("Correct!\n");
 			break;
 		} 
