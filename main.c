@@ -15,6 +15,7 @@ int main() {
 	random_word[strcspn(random_word, "\n")] = 0;
 	printf("Enter a 5 letter word below\n");
 
+	bool correct = false;
 	int guess_count = 0;
 	while (guess_count < 5) {
 		char input[100] = "";
@@ -25,6 +26,7 @@ int main() {
 
 		if (strcmp(input, random_word) == 0) {
 			printf("Correct!\n");
+			correct = true;
 			break;
 		} 
 
@@ -33,6 +35,10 @@ int main() {
 
 		printf("%s\n", result_string);
 		guess_count++;
+	}
+
+	if (!correct) {
+		printf("You're out of guesses. Correct word: %s\n", random_word);
 	}
 
 	return 0;
